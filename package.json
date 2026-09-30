@@ -1,0 +1,49 @@
+{
+  "name": "dsh-task-complete-sound",
+  "version": "2.0.0",
+  "type": "module",
+  "license": "MIT",
+  "description": "Plays a chosen chime preset when a task finishes in the Harness Web UI.",
+  "icon": "./icon.svg",
+  "main": "./index.js",
+  "author": "Chatbot-zhou",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chatbot-zhou/dsh-task-complete-sound.git"
+  },
+  "homepage": "https://github.com/Chatbot-zhou/dsh-task-complete-sound#readme",
+  "bugs": {
+    "url": "https://github.com/Chatbot-zhou/dsh-task-complete-sound/issues"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "locale/*.json",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-bundle",
+    "harness-plugin",
+    "deepseek-harness",
+    "notification",
+    "sound"
+  ],
+  "dependencies": {
+    "@deepseek-ai/schemastery": "3.18.4"
+  },
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": { "platform": "web", "immediately": true }
+  }
+}
